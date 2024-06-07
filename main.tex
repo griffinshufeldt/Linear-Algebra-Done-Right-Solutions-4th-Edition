@@ -1,0 +1,113 @@
+\documentclass[12pt]{article} % Sets the font size to 12pt
+\usepackage{amsmath,amsthm,amssymb,color,latexsym}
+\usepackage[margin=1in]{geometry}
+\usepackage[all]{xy}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{natbib}
+
+\newtheorem{problem}{}[subsection]
+
+\newenvironment{solution}[1][\it{Proof}]{\textbf{#1. } }{$\square$}
+
+\begin{document}                  % DO NOT DELETE THIS LINE
+
+\title{Linear Algebra Done Right, 4th Edition Solutions}
+
+\author{Griffin Shufeldt}
+\date{ }
+
+\maketitle                        % DO NOT DELETE THIS LINE
+\newpage
+
+\section*{Chapter 1: Vector Spaces}
+\subsection*{Exercises 1A: $R^n$ and $C^n$}
+\textbf{1.} Show that $\alpha + \beta = \beta + \alpha$ for all $\alpha,\beta \in C$ \\
+
+\begin{solution}
+\begin{align*}
+    & \alpha, \beta \in C \rightarrow \alpha = a + bi \text{ and } \beta = c + di \text{ where } a,b,c,d \in R & \\
+    & \text{LHS: } & \\
+    & \alpha + \beta = (a + bi) + (c + di) = (a+c) + (b+d)i & \\
+    & \text{RHS: } & \\
+    & \beta + \alpha = (c+di) + (a+bi) = (c+a) + (d+b)i & \\
+    & \text{Because $a,b,c,d \in R$, they obey commutativity} & \\
+    & \rightarrow \beta + \alpha = (c+a) + (d+b)i = (a+c) + (b+d)i = \alpha + \beta
+\end{align*}
+\end{solution}
+
+\textbf{2.} Show that $(\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)$ for all $\alpha,\beta,\lambda \in C$ \\
+
+\begin{solution}
+\begin{align*}
+    &\text{LHS: } & \\
+    &\alpha = a+bi, \beta = c+di, \lamba = e+fi &\\
+    &(\alpha + \beta) + \lambda = ((a+bi)+(c+di))+(e+fi) = & \\
+    &(a+c)+(b+d)i + (e+fi) & \\
+    &(a+c+e)+(b+d+f)i  & \\
+    & \text{RHS: } & \\
+    &\alpha + (\beta + \lambda) = (a + bi) + ((c+di)+(e+fi)) = & \\
+    &(a+bi) + ((c+e) + (d+f)i) = (c+e+a) + (d+f+b) & \\
+    &\text{By commutativity of real numbers } (\alpha + \beta) + \lambda = \alpha + (\beta + \lambda) 
+\end{align*}
+\end{solution}
+
+\textbf{3.} Show that $(\alpha\beta)\lambda = \alpha(\beta\lambda)$ for all $\alpha,\beta,\lambda \in C$ \\
+
+\begin{solution}
+\begin{align*}
+    &\text{LHS: } & \\ 
+    &\alpha\beta = (a+bi)(c+di) = (ac - bd) + (ad + bc)i & \\
+    &((ac - bd) + (ad + bc)i)\lambda = (ac - bd) + (ad + bc)i)(e+fi) & \\
+    &(ace - bde) + (ade+bce)i +(acf - bdf)i + (adf+bcf)(-1) & \\
+    &(ace-bde-adf-bcf)+(ade+bce+acf-bdf)i & \\
+    &\text{RHS: } & \\ 
+    & \alpha(\beta\lambda) = (a+bi)((c+di)(e+fi)) & \\
+    & = (a+bi)((ce-df)+(cf+de)i)  & \\
+    & = (cea - dfa -cfb -deb) + (cfa+dea +ceb -dfb)i & \\
+    & \text{By commutativity: } LHS = RHS &
+\end{align*}
+\end{solution}
+
+\textbf{4.} Show that $\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta$ for all $\lambda, \alpha, \beta \in C$ \\
+
+\begin{solution}
+\begin{align*} 
+    &\text{LHS: } &\\
+    &\lambda(\alpha+\beta) = (e+fi)((a+bi) + (c+di)) &\\
+    &= (e+fi)((a+c)+(b+d)i) &\\
+    &(e+fi)(a+c)+(e+fi)(bi+di) & \\
+    &(ea +ce) + (fa +fc)i + (eb + ed)i +(-fb -fd)& \\
+    &(ea + ce - fb - fd) + (fa+fc+eb+ed)i &\\
+    &\text{RHS: } &\\
+    &\lambda\alpha + \lambda\beta = (e+fi)(a+bi) + (e+fi)(c+di) &\\
+    &(ea-fb) + (fa+eb)i + (ec-fd)+(fc+ed)i& \\
+    &= (ea-fb+ec-fd) + (fa+eb+fc+ed)i &  \\
+    &\text{By Commutativity: } LHS = RHS &
+\end{align*}
+\end{solution}
+
+\textbf{5.} Show that for every $\alpha \in C$ there exists a unique $\beta \in C$ such that $\alpha + \beta = 0$ \\ 
+
+\begin{solution}
+\begin{align*}
+    &\text{Proving existence: } & \\
+    &\alpha = (a+bi), \beta = (-a-bi) \rightarrow \alpha + \beta = 0 & \\
+    &\text{Proving uniqueness: assume that $\lambda \ne \beta$ is also an additive inverse} & \\
+    &\alpha + \beta = 0 = \alpha + \lambda \rightarrow \lambda = \beta & \\
+    &\text{Contradiction, only assumption made was $\lambda \ne \beta$, so $\lambda = \beta$ }
+\end{align*}
+\end{solution}
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{citations/literature,citations/data}
+\begin{enumerate}
+    \item Axler, S. (2024). Linear Algebra Done Right (4th ed.). Springer.
+\end{enumerate}
+
+
+
+\end{document}  
