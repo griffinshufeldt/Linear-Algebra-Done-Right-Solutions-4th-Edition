@@ -101,12 +101,125 @@
 \end{align*}
 \end{solution}
 
+\textbf{6.} Show that for every $\alpha \in C$ with $\alpha \ne 0$ there exists a unique $\beta \in C$ such that $\alpha\beta = 1$ \\ 
+
+\begin{solution}
+\begin{align*}
+    &\text{Proving existence: } & \\
+    &\alpha = (a+bi), \beta = \frac{1}{(a+bi} \rightarrow \alpha\beta = 1 & \\
+    &\text{Proving uniqueness: assume that $\lambda \ne \beta$ also satisies this property} & \\
+    &\alpha\beta = 1 = 1(\alpha\lambda) \rightarrow \beta = \lambda & \\
+    &\text{Contradiction, only assumption made was $\lambda \ne \beta$, so $\lambda = \beta$ }
+\end{align*}
+\end{solution}
+
+\textbf{7.} Show that $\frac{-1 + \sqrt{3}i}{2}$ is a cube root of 1 (TODO) \\ 
+
+\textbf{8.} Find two distinct square roots of $i$ (TODO) \\
+
+\textbf{9.} Find $X \in R^4$ such that (4,-3,1,7) +2x = (5,9-6,8) \\ 
+
+\begin{solution}
+\begin{align*}
+    & y = 2x \rightarrow (4,-3,1,7) + y = (4+y_1,-3+y_2,1+y_3,7+y_4) & \\
+    & y_1 = 1, y_2 = 12, y_3 = -7, y_4 = 1 \rightarrow (4,-3,1,7) + y = (5,9,-6,8) & \\
+    & x = \frac{y}{2} = (1,12,-7,1)/2 = (\frac{1}{2},6,\frac{-7}{2},\frac{1}{2}) & 
+\end{align*}
+\end{solution}
+
+\textbf{10.} Explain why there does not exist $\lambda \in C$ such that $\lambda(2-3i,5+4i,-6+7i) = (12-5i,7+22i,32-9i)$\\ 
+
+\begin{solution}
+This is because $\lambda$ is a scalar, not a list/vector. It is one number that will be multiplied across every element of the vector. Because the vector on the right hand side is not a multiple of the vector on the left hand side, no such $\lambda$ exists to satisfy this. 
+\end{solution}\\
+
+\textbf{11.} Show that $(x+y)+z = x + (y+z)$ for all $x,y,z \in F^n$ \\ 
+
+\begin{solution}
+\begin{align*}
+    & \text{LHS: } & \\
+    & (x+y) + z = ((x_1, ... , x_n) +(y_1,...,y_n)) + (z_1,...z_n) & \\
+    & (x_1 + y_1, ..., x_n + y_n) + (z_1,...z_n) & \\
+    & (x_1 + y_1+z_1,...x_n+y_n+z_n) & \\
+    & \text{RHS: } & \\
+    & x + (y+z) = (x_1, ... , x_n) +((y_1,...,y_n) + (z_1,...z_n)) & \\
+    & (x_1, ... , x_n) + (y_1 + z_1, ..., y_n + z_n) & \\
+    & (y_1+ z_1 + x_1 ,...y_n+z_n+x_n) & \\
+    & \text{By commutativity: } RHS = LHS
+\end{align*}
+\end{solution}
+
+\textbf{12.} Show that (ab)x = a(bx) for all $x \in F^n$ and $a,b \in F$ \\
+
+\begin{solution}
+\begin{align*}
+    & \text{LHS: } & \\
+    & \text{Let } ab = c \rightarrow ab(x) = cx & \\
+    & = (cx_1,...,cx_n) & \\
+    & \text{RHS: } & \\
+    & a(bx) = a(bx_1,...,b_xn) & \\
+    & = (abx_1,...,abx_n) = (cx_1,...cx_n) &
+\end{align*}
+\end{solution}
+
+\textbf{13.} Show that $1x = x$ for all $x \in F^n$ \\
+
+\begin{solution}
+\begin{align*}
+    & 1x = 1(x_1,...,x_n) = (1x_1,...1x_n) = (x_1,...x_n) = x &
+\end{align*}
+\end{solution}
+
+\textbf{14.} Show that $\lambda(x+y) = \lambda x + \lambda y$ for all $\lambda \in F$ and $x,y \in F^n$ \\
+
+\begin{solution}
+\begin{align*}
+    &  LHS = \lambda(x+y) = \lambda(x_1+y_1,...x_n+y_n) & \\
+    & = (\lambda(x_1 +y_1), ..., \lambda(x_n+y_n) = (\lambda x_1 + \lambda y_1,...,\lambda x_n + \lambda y_n) & \\
+    & = \lambda(x_1,...,x_n) + \lambda(y_1,...,y_n) = \lambda(x) + \lambda(y)  = RHS &
+\end{align*}
+\end{solution}
+
+\textbf{15.} Show that $(a+b)x = ax + bx$ for all $a,b \in F$ and $x \in F^n$ \\
+
+\begin{solution}
+\begin{align*}
+    & \text{Let } a+b  = c \rightarrow LHS = cx & \\
+    & = c(x_1,...x_n) = (cx_1,...,cx_n) = ((a+b)x_1,...,(a+b)(x_n)) & \\
+    & (ax_1 + bx_1,...,ax_n + bx_n) = ax + bx = RHS
+\end{align*}
+\end{solution}
+
+\subsection*{Exercises 1B: Definition of Vector Space}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \bibliographystyle{plain}
 \bibliography{citations/literature,citations/data}
 \begin{enumerate}
     \item Axler, S. (2024). Linear Algebra Done Right (4th ed.). Springer.
 \end{enumerate}
+
+
 
 
 
